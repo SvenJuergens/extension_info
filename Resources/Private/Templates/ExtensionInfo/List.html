@@ -1,0 +1,13 @@
+<html data-namespace-typo3-fluid="true"
+	xmlns:f="http://xsd.helmut-hummel.de/ns/TYPO3/CMS/Fluid/ViewHelpers"
+>
+<f:layout name="Default" />
+<f:section name="main">
+	<f:debug>{extensionInfos}</f:debug>
+	<p>
+		<f:for each="{extensionInfos}" as="info" key="label">
+			<strong>{label}</strong> - {info} <br>
+		</f:for>
+	</p>
+</f:section>
+</html>

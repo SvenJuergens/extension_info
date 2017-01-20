@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-01-19T20:58:39Z" product-name="extension_info">
+		<header/>
+		<body>
+			<trans-unit id="tx_extensioninfo_domain_model_info">
+				<source>Info</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
