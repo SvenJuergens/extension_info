@@ -6,6 +6,63 @@
 			<trans-unit id="tx_extensioninfo_domain_model_info">
 				<source>Info</source>
 			</trans-unit>
+			<trans-unit id="name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="extensionKey">
+				<source>Extension Key</source>
+			</trans-unit>
+			<trans-unit id="version">
+				<source>Version</source>
+			</trans-unit>
+			<trans-unit id="lastUpdated">
+				<source>Last Updated</source>
+			</trans-unit>
+			<trans-unit id="firstUpload">
+				<source>First Upload</source>
+			</trans-unit>
+			<trans-unit id="downloads">
+				<source>Downloads</source>
+			</trans-unit>
+			<trans-unit id="category">
+				<source>Category</source>
+			</trans-unit>
+			<trans-unit id="dependencies">
+				<source>Dependencies</source>
+			</trans-unit>
+			<trans-unit id="conflicts">
+				<source>Conflicts</source>
+			</trans-unit>
+			<trans-unit id="manual">
+				<source>Manual</source>
+			</trans-unit>
+			<trans-unit id="manual">
+				<source>Manual</source>
+			</trans-unit>
+			<trans-unit id="externalRepository">
+				<source>External Repository</source>
+			</trans-unit>
+			<trans-unit id="username">
+				<source>Username</source>
+			</trans-unit>
+			<trans-unit id="author">
+				<source>Author</source>
+			</trans-unit>
+			<trans-unit id="t3x">
+				<source>Download T3X Package</source>
+			</trans-unit>
+			<trans-unit id="zip">
+				<source>Download ZIP Package</source>
+			</trans-unit>
+			<trans-unit id="lastUploadComment">
+				<source>Last upload comment</source>
+			</trans-unit>
+			<trans-unit id="ideasOrProblems?">
+				<source>Ideas or Problems?</source>
+			</trans-unit>
+			<trans-unit id="likeIt??">
+				<source>Like it?</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

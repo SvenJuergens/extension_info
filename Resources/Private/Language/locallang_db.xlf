@@ -6,6 +6,13 @@
 			<trans-unit id="tx_extensioninfo_domain_model_info">
 				<source>Info</source>
 			</trans-unit>
+			<trans-unit id="flexforms_tab.general">
+				<source>General</source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.extKeys">
+				<source>Extension keys</source>
+			</trans-unit>
+
 		</body>
 	</file>
 </xliff>

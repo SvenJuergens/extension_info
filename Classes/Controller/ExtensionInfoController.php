@@ -14,12 +14,21 @@ namespace SvenJuergens\ExtensionInfo\Controller;
 
 use Goutte\Client;
 use SvenJuergens\ExtensionInfo\Utility\AskTypo3;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 
 /**
  * ExtensionController
  */
 class ExtensionInfoController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
+
+    public function initializeListAction()
+    {
+        if (isset($this->settings['extKeys'])) {
+            $this->settings['extKeys'] = explode(PHP_EOL, $this->settings['extKeys']);
+        }
+    }
 
     /**
      * action list
@@ -28,7 +37,12 @@ class ExtensionInfoController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCo
      */
     public function listAction()
     {
-        $test = AskTypo3::forExtensionInfo('disable_beuser');
-        $this->view->assign('extensionInfos', $test);
+        $extensionInfos = [];
+        if (is_array($this->settings['extKeys'])) {
+            foreach ($this->settings['extKeys'] as $extKey) {
+                $extensionInfos[] = AskTypo3::forExtensionInfo($extKey);
+            }
+        }
+        $this->view->assign('extensionInfos', $extensionInfos);
     }
 }

@@ -5,9 +5,12 @@
 <f:section name="main">
 	<f:debug>{extensionInfos}</f:debug>
 	<p>
-		<f:for each="{extensionInfos}" as="info" key="label">
-			<strong>{label}</strong> - {info} <br>
+		<f:for each="{extensionInfos}" as="info">
+			<f:for each="{info}" as="extension" key="label">
+				<strong><f:translate key="{label}" /></strong> - {extension} <br>
+			</f:for>
 		</f:for>
 	</p>
 </f:section>
 </html>
+

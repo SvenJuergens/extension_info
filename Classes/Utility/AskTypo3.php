@@ -15,13 +15,13 @@ namespace SvenJuergens\ExtensionInfo\Utility;
 use Goutte\Client;
 use Symfony\Component\DomCrawler\Crawler;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 
 class AskTypo3
 {
 
     public static function forExtensionInfo($extKey)
     {
+        $isThereAnCacheEntryForExtKey = self::checkCacheForExtKey($extKey);
         $host = 'https://typo3.org';
         $client = new Client();
         $crawler = $client->request(
@@ -51,5 +51,16 @@ class AskTypo3
         $extensionInfo['lastUploadComment'] =
             $crawler->filter('.ter-ext-single-lastUploadComment > p')->html();
         return $extensionInfo;
+    }
+
+    /**
+     * Check in tempFolder for a cacheFile
+     *
+     * @param $extKey string
+     */
+    public static function checkCacheForExtKey($extKey)
+    {
+#        GeneralUtility::writeFileToTypo3tempDir();
+ #       GeneralUtility::writeFileToTypo3tempDir()
     }
 }

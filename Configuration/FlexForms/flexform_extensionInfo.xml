@@ -1,0 +1,33 @@
+<T3DataStructure>
+	<meta>
+		<langDisable>1</langDisable>
+	</meta>
+	<sheets>
+		<!--
+			################################
+			  SHEET General Settings
+			################################
+		-->
+		<sDEF>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:extension_info/Resources/Private/Language/locallang_db.xlf:flexforms_tab.general</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+				<!-- extKeys -->
+					<settings.extKeys>
+						<TCEforms>
+						<label>LLL:EXT:extension_info/Resources/Private/Language/locallang_db.xlf:flexforms_general.extKeys</label>
+						<config>
+							<type>text</type>
+							<cols>30</cols>
+							<rows>5</rows>
+						</config>
+						</TCEforms>
+					</settings.extKeys>
+				</el>
+			</ROOT>
+		</sDEF>
+	</sheets>
+</T3DataStructure>
