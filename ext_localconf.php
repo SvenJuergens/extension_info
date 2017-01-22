@@ -16,7 +16,20 @@ call_user_func(
                 
             ]
         );
-
     },
     $_EXTKEY
 );
+
+// Register cache frontend
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['extension_info'] = [
+    'frontend' => \TYPO3\CMS\Core\Cache\Frontend\VariableFrontend::class,
+    'backend' => \TYPO3\CMS\Core\Cache\Backend\FileBackend::class,
+    'groups' => [
+        'pages',
+        'system'
+    ],
+    'options' => [
+        //24h
+        'defaultLifetime' => 86400,
+    ]
+];

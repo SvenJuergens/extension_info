@@ -12,10 +12,7 @@ namespace SvenJuergens\ExtensionInfo\Controller;
  *
  ***/
 
-use Goutte\Client;
-use SvenJuergens\ExtensionInfo\Utility\AskTypo3;
-use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
+use SvenJuergens\ExtensionInfo\Utility\AskTypo3Org;
 
 /**
  * ExtensionController
@@ -40,7 +37,7 @@ class ExtensionInfoController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCo
         $extensionInfos = [];
         if (is_array($this->settings['extKeys'])) {
             foreach ($this->settings['extKeys'] as $extKey) {
-                $extensionInfos[] = AskTypo3::forExtensionInfo($extKey);
+                $extensionInfos[] = AskTypo3Org::forExtensionInfo($extKey);
             }
         }
         $this->view->assign('extensionInfos', $extensionInfos);

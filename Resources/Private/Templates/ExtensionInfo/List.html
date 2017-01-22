@@ -3,11 +3,22 @@
 >
 <f:layout name="Default" />
 <f:section name="main">
-	<f:debug>{extensionInfos}</f:debug>
 	<p>
 		<f:for each="{extensionInfos}" as="info">
-			<f:for each="{info}" as="extension" key="label">
-				<strong><f:translate key="{label}" /></strong> - {extension} <br>
+			<f:for each="{info}" as="value" key="label">
+				<f:if condition="{value.0}">
+					<f:then>
+						<strong><f:translate key="{label}" /></strong>
+						<ul>
+						<f:for each="{value}" as="subValue">
+							<li>{subValue}</li>
+						</f:for>
+						</ul>
+					</f:then>
+					<f:else>
+						<strong><f:translate key="{label}" /></strong> - {value} <br>
+					</f:else>
+				</f:if>
 			</f:for>
 		</f:for>
 	</p>
