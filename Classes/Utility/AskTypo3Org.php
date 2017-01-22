@@ -34,8 +34,11 @@ class AskTypo3Org
             'GET',
             'https://typo3.org/extensions/repository/view/' . $extKey
         );
-
-        $nodeValues = $crawler->filter('.ter-ext-info tr')->each(function (Crawler $node, $i) {
+        $infoTable = $crawler->filter('.ter-ext-info tr');
+        if ($infoTable->count() == 0) {
+            return null;
+        }
+        $nodeValues = $infoTable->each(function (Crawler $node, $i) {
             $first = $node->children()->first()->text();
             $firstContent = GeneralUtility::underscoredToLowerCamelCase(str_replace(' ', '_', $first));
             $last = $node->children()->last();
