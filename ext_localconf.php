@@ -33,3 +33,8 @@ $GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['extension_
         'defaultLifetime' => 86400,
     ]
 ];
+
+require_once(
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) .
+    'Resources/Private/Libraries/vendor/autoload.php'
+);
