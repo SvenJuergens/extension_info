@@ -38,3 +38,7 @@ require_once(
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) .
     'Resources/Private/Libraries/vendor/autoload.php'
 );
+
+
+$GLOBALS['TYPO3_CONF_VARS']['FE']['eID_include']['extensionInfoApi'] =
+    \SvenJuergens\ExtensionInfo\Eid\Api::class . '::processRequest';

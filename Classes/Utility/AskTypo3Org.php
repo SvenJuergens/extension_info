@@ -3,7 +3,7 @@ namespace SvenJuergens\ExtensionInfo\Utility;
 
 /***
  *
- * This file is part of the "Extension Downloads Calc" Extension for TYPO3 CMS.
+ * This file is part of the "Extension Info" Extension for TYPO3 CMS.
  *
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.

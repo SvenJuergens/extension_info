@@ -3,7 +3,7 @@ namespace SvenJuergens\ExtensionInfo\Controller;
 
 /***
  *
- * This file is part of the "Extension Downloads Calc" Extension for TYPO3 CMS.
+ * This file is part of the "Extension Info" Extension for TYPO3 CMS.
  *
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
@@ -37,7 +37,10 @@ class ExtensionInfoController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCo
         $extensionInfos = [];
         if (is_array($this->settings['extKeys'])) {
             foreach ($this->settings['extKeys'] as $extKey) {
-                $extensionInfos[] = AskTypo3Org::forExtensionInfo($extKey);
+                $info = AskTypo3Org::forExtensionInfo($extKey);
+                if ($info !== null) {
+                    $extensionInfos[] = $info;
+                }
             }
         }
         $this->view->assign('extensionInfos', $extensionInfos);
